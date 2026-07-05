@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DAILY PROFIT CHANNEL</title>
-
-   <!-- Meta Pixel Code -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earn Factory – Smart Earnings Community</title>
+ <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -24,34 +22,27 @@ src="https://www.facebook.com/tr?id=1031072713218984&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <!-- ===== Meta ===== -->
+    <meta name="description" content="Earn Factory is a private community for smart earners. Get daily updates, insights, and connect with active members. Join our Telegram today!" />
+    <meta name="keywords" content="Earn Factory, Telegram community, online earnings, daily updates, smart earners, private group" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://rajendra9315.github.io/skillverse.org/" />
+
+    <!-- ===== Open Graph ===== -->
+    <meta property="og:title" content="Earn Factory – Smart Earnings Community" />
+    <meta property="og:description" content="Join Earn Factory for daily updates, expert insights, and a network of active earners." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rajendra9315.github.io/skillverse.org/" />
+    <meta property="og:image" content="dailyprofit.jpg" />
+
+    <!-- ===== Twitter Card ===== -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Earn Factory – Smart Earnings Community" />
+    <meta name="twitter:description" content="Daily updates, expert insights, and a community of active earners. Join Earn Factory on Telegram today." />
+    <meta name="twitter:image" content="dailyprofit.jpg" />
 
     <style>
-        :root {
-            --bg-deep: #0a0a0f;
-            --bg-card: #111119;
-            --bg-card2: #161622;
-            --gold: #f0b90b;
-            --gold2: #fcd535;
-            --gold-dark: #c99a08;
-            --accent: #ff6b35;
-            --accent2: #ff8c5a;
-            --red: #ff3860;
-            --green: #00d68f;
-            --teal: #0ef2d5;
-            --white: #ffffff;
-            --muted: #9ca3af;
-            --border-subtle: rgba(255, 255, 255, 0.06);
-            --border-gold: rgba(240, 185, 11, 0.3);
-            --glow-gold: rgba(240, 185, 11, 0.25);
-            --glow-teal: rgba(14, 242, 213, 0.2);
-        }
-
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -59,456 +50,169 @@ src="https://www.facebook.com/tr?id=1031072713218984&ev=PageView&noscript=1"
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--bg-deep);
+            background: #0b0f1a;
             color: #fff;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
+            margin: 0;
+            line-height: 1.6;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Animated background particles */
-        .bg-particles {
+        /* ===== ANIMATED BACKGROUND ORBS ===== */
+        .bg-orbs {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
+            inset: 0;
             z-index: 0;
-        }
-
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            animation: floatUp linear infinite;
-            opacity: 0;
-        }
-
-        @keyframes floatUp {
-            0% {
-                transform: translateY(100vh) scale(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-10vh) scale(1.2);
-                opacity: 0;
-            }
-        }
-
-        /* Grid pattern overlay */
-        .grid-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             pointer-events: none;
-            z-index: 0;
-            background-image:
-                linear-gradient(rgba(240, 185, 11, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(240, 185, 11, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
-            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+            overflow: hidden;
         }
 
-        /* Main container */
-        .main-container {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            max-width: 430px;
-        }
-
-        /* Floating orbs */
         .orb {
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
-            pointer-events: none;
-            z-index: -1;
-            animation: orbPulse 6s ease-in-out infinite;
+            opacity: 0.4;
+            animation: floatOrb 18s ease-in-out infinite alternate;
         }
+
         .orb-1 {
-            width: 200px;
-            height: 200px;
-            background: rgba(240, 185, 11, 0.12);
-            top: -60px;
-            right: -40px;
+            width: 500px;
+            height: 500px;
+            background: #ff1a1a;
+            top: -150px;
+            right: -100px;
             animation-delay: 0s;
         }
+
         .orb-2 {
-            width: 180px;
-            height: 180px;
-            background: rgba(14, 242, 213, 0.1);
-            bottom: -50px;
-            left: -50px;
-            animation-delay: 3s;
-        }
-        .orb-3 {
-            width: 150px;
-            height: 150px;
-            background: rgba(255, 56, 96, 0.08);
-            top: 40%;
-            left: -30px;
-            animation-delay: 1.5s;
+            width: 400px;
+            height: 400px;
+            background: #00c853;
+            bottom: -100px;
+            left: -100px;
+            animation-delay: -6s;
+            opacity: 0.25;
         }
 
-        @keyframes orbPulse {
-            0%,
-            100% {
-                transform: scale(1) translate(0, 0);
-                opacity: 0.7;
+        .orb-3 {
+            width: 300px;
+            height: 300px;
+            background: #ffd700;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -12s;
+            opacity: 0.12;
+        }
+
+        @keyframes floatOrb {
+            0% {
+                transform: translate(0, 0) scale(1);
             }
             33% {
-                transform: scale(1.3) translate(20px, -20px);
-                opacity: 1;
+                transform: translate(60px, -40px) scale(1.1);
             }
             66% {
-                transform: scale(0.8) translate(-15px, 15px);
-                opacity: 0.5;
+                transform: translate(-30px, 50px) scale(0.9);
+            }
+            100% {
+                transform: translate(40px, 20px) scale(1.05);
             }
         }
 
-        /* CARD */
-        .card {
-            background: var(--bg-card);
-            border-radius: 24px;
-            padding: 28px 22px 32px;
-            text-align: center;
+        /* ===== CARD CONTAINER ===== */
+        .box {
             position: relative;
-            border: 1px solid var(--border-subtle);
-            box-shadow:
-                0 0 0 1px rgba(255, 255, 255, 0.03),
-                0 30px 60px rgba(0, 0, 0, 0.6),
-                0 0 80px rgba(240, 185, 11, 0.06);
-            overflow: hidden;
+            z-index: 1;
+            max-width: 520px;
+            width: 100%;
+            background: rgba(20, 29, 45, 0.72);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 40px 34px 34px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 215, 0, 0.05), 0 0 60px rgba(255, 26, 26, 0.08);
+            text-align: center;
+            animation: cardEntry 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            transform: translateY(30px);
+            opacity: 0;
         }
 
-        /* Shine effect on card */
-        .card::before {
+        @keyframes cardEntry {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.96);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* ===== LOGO ===== */
+        .logo-wrap {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .logo-wrap::after {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(from 0deg,
-                    transparent,
-                    rgba(240, 185, 11, 0.04),
-                    transparent,
-                    rgba(14, 242, 213, 0.04),
-                    transparent);
-            animation: shineRotate 20s linear infinite;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        @keyframes shineRotate {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .card>* {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* TOP BADGE */
-        .top-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(135deg, rgba(240, 185, 11, 0.15), rgba(252, 213, 53, 0.08));
-            border: 1px solid var(--border-gold);
-            border-radius: 50px;
-            padding: 8px 18px;
-            margin-bottom: 16px;
-            animation: badgeGlow 2.5s ease-in-out infinite;
-        }
-
-        @keyframes badgeGlow {
-            0%,
-            100% {
-                box-shadow: 0 0 12px rgba(240, 185, 11, 0.2);
-            }
-            50% {
-                box-shadow: 0 0 28px rgba(240, 185, 11, 0.45);
-            }
-        }
-
-        .badge-dot {
-            width: 10px;
-            height: 10px;
-            background: var(--gold);
+            inset: -8px;
             border-radius: 50%;
-            animation: dotBlink 1.2s ease-in-out infinite;
-            box-shadow: 0 0 10px var(--gold);
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.15), transparent 70%);
+            animation: pulseGlow 3s ease-in-out infinite;
         }
 
-        @keyframes dotBlink {
+        @keyframes pulseGlow {
             0%,
             100% {
-                opacity: 1;
                 transform: scale(1);
+                opacity: 0.6;
             }
             50% {
-                opacity: 0.4;
-                transform: scale(0.7);
+                transform: scale(1.15);
+                opacity: 1;
             }
         }
 
-        .badge-text {
-            font-family: 'Rajdhani', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 3px;
-            color: var(--gold2);
-            text-transform: uppercase;
-        }
-
-        /* PROFILE IMAGE */
-        .profile-wrapper {
-            position: relative;
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 18px;
-        }
-
-        .profile-ring {
-            position: absolute;
-            inset: -6px;
+        .logo {
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
-            border: 3px solid transparent;
-            border-top-color: var(--gold);
-            border-right-color: var(--teal);
-            animation: ringSpin 4s linear infinite;
-        }
-
-        @keyframes ringSpin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .profile-img-wrap {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid rgba(255, 255, 255, 0.1);
+            display: block;
+            margin: 0 auto;
+            border: 3px solid #FFD700;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.12);
+            object-fit: cover;
+            background: #1a2538;
             position: relative;
             z-index: 1;
-            box-shadow: 0 0 35px rgba(240, 185, 11, 0.2);
         }
 
-        .profile-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* TITLE */
-        .main-title {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 900;
-            font-size: 22px;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
-            background: linear-gradient(180deg, #ffffff 0%, #e0e0e0 50%, #b0b0b0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .main-title .highlight {
-            background: linear-gradient(135deg, var(--gold), var(--gold2), var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: goldShimmer 3s ease-in-out infinite;
-        }
-
-        @keyframes goldShimmer {
-            0%,
-            100% {
-                filter: brightness(1);
-            }
-            50% {
-                filter: brightness(1.4);
-            }
-        }
-
-        .subtitle-text {
-            font-size: 13px;
-            color: var(--muted);
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
-            font-weight: 400;
-        }
-
-        /* STATS ROW */
-        .stats-row {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-value {
-            font-family: 'Orbitron', sans-serif;
+        /* ===== TYPOGRAPHY ===== */
+        h1 {
+            font-size: 34px;
             font-weight: 800;
-            font-size: 20px;
-            color: var(--gold);
-            letter-spacing: 1px;
-        }
-
-        .stat-label {
-            font-size: 10px;
-            color: var(--muted);
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-top: 2px;
-        }
-
-        /* TIMER - Modern redesign */
-        .timer-section {
-            margin-bottom: 20px;
-        }
-
-        .timer-label {
-            font-size: 11px;
-            letter-spacing: 3px;
-            color: var(--red);
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            animation: labelPulse 1.5s ease-in-out infinite;
-        }
-
-        @keyframes labelPulse {
-            0%,
-            100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
-        }
-
-        .timer-display {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .timer-block {
-            background: var(--bg-card2);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
-            padding: 14px 10px;
-            min-width: 70px;
-            position: relative;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-        }
-
-        .timer-num {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 900;
-            font-size: 36px;
-            color: #fff;
-            letter-spacing: 2px;
-            line-height: 1;
-        }
-
-        .timer-unit {
-            font-size: 10px;
-            color: var(--muted);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-top: 4px;
-        }
-
-        .timer-separator {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 900;
-            font-size: 30px;
-            color: var(--red);
-            animation: separatorBlink 1s step-end infinite;
-        }
-
-        @keyframes separatorBlink {
-            0%,
-            100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.2;
-            }
-        }
-
-        /* CTA BUTTON with Telegram Icon */
-        .cta-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            width: 100%;
-            padding: 16px 20px;
-            border-radius: 50px;
-            background: linear-gradient(135deg, #f0b90b, #e8a804, #f0b90b);
+            background: linear-gradient(135deg, #ffd700, #ffb300);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 2px 0 4px;
+            letter-spacing: -0.5px;
+            animation: shimmer 4s ease-in-out infinite;
             background-size: 200% 200%;
-            color: #0a0a0f;
-            font-weight: 800;
-            font-size: 16px;
-            text-decoration: none;
-            letter-spacing: 1px;
-            font-family: 'Poppins', sans-serif;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            animation: btnShimmer 3s ease-in-out infinite;
-            box-shadow: 0 8px 30px rgba(240, 185, 11, 0.35);
-            margin-bottom: 8px;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 40px rgba(240, 185, 11, 0.5);
-            animation: none;
-            background: linear-gradient(135deg, #fcd535, #f0b90b, #fcd535);
-        }
-
-        .cta-button:active {
-            transform: scale(0.97);
-        }
-
-        @keyframes btnShimmer {
+        @keyframes shimmer {
             0%,
             100% {
                 background-position: 0% 50%;
@@ -518,327 +222,333 @@ src="https://www.facebook.com/tr?id=1031072713218984&ev=PageView&noscript=1"
             }
         }
 
-        /* Telegram icon inside button */
-        .telegram-icon-svg {
-            width: 24px;
-            height: 24px;
-            flex-shrink: 0;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-            transition: transform 0.3s ease;
-        }
-
-        .cta-button:hover .telegram-icon-svg {
-            transform: rotate(10deg) scale(1.1);
-        }
-
-        .cta-sub {
-            font-size: 11px;
-            color: var(--muted);
-            letter-spacing: 1px;
-            margin-bottom: 16px;
-        }
-
-        /* FEATURES */
-        .features-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 18px;
-        }
-
-        .feature-row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--bg-card2);
-            border-radius: 12px;
-            padding: 12px 16px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            transition: all 0.3s ease;
-        }
-
-        .feature-row:hover {
-            border-color: rgba(240, 185, 11, 0.2);
-            box-shadow: 0 4px 20px rgba(240, 185, 11, 0.08);
-        }
-
-        .feature-icon {
-            font-size: 20px;
-            flex-shrink: 0;
-        }
-
-        .feature-text {
-            font-size: 13px;
-            font-weight: 500;
-            color: #d1d5db;
+        .subhead {
+            font-size: 15px;
+            color: #b0c4de;
+            margin-bottom: 4px;
+            font-weight: 400;
             letter-spacing: 0.3px;
         }
 
-        .feature-highlight {
-            color: var(--gold);
-            font-weight: 700;
+        .tagline {
+            font-size: 14px;
+            color: #8899bb;
+            margin: 6px 0 20px;
+            padding: 0 4px;
         }
 
-        /* DIVIDER */
-        .divider-line {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
-            margin: 18px 0;
+        .tagline strong {
+            color: #FFD700;
+            font-weight: 600;
         }
 
-        /* EXPERIENCE SECTION */
-        .exp-section {
-            margin-bottom: 16px;
+        /* ===== CTA BUTTON – RED with GREEN Telegram Icon ===== */
+        .cta-wrap {
+            margin: 8px 0 20px;
+            position: relative;
         }
-        .exp-title {
-            font-family: 'Rajdhani', sans-serif;
+
+        .cta-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 60px;
+            background: linear-gradient(135deg, rgba(255, 26, 26, 0.3), rgba(255, 215, 0, 0.15));
+            filter: blur(16px);
+            animation: ctaGlow 2.8s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes ctaGlow {
+            0% {
+                opacity: 0.4;
+                transform: scale(0.98);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.06);
+            }
+        }
+
+        .tg {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            background: linear-gradient(135deg, #e60000, #cc0000);
+            color: #fff;
+            text-decoration: none;
+            padding: 20px 28px;
+            border-radius: 60px;
+            font-size: 21px;
             font-weight: 700;
-            font-size: 18px;
-            letter-spacing: 1px;
-            color: #ccc;
-            margin-bottom: 4px;
-        }
-        .exp-big {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 900;
-            font-size: 22px;
-            letter-spacing: 1px;
-            color: var(--gold);
-            margin-bottom: 2px;
-        }
-        .exp-sub {
-            font-size: 11px;
-            color: var(--muted);
-            letter-spacing: 2px;
+            letter-spacing: 0.4px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 8px 0 #800000, 0 12px 40px rgba(230, 0, 0, 0.35);
+            border: none;
+            cursor: pointer;
+            width: 100%;
             text-transform: uppercase;
         }
 
-        /* ADS MANAGED */
-        .ads-footer {
-            margin-top: 10px;
-        }
-        .ads-footer a {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 15px;
-            font-weight: 700;
-            color: #ff6b8a;
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-        .ads-footer a:hover {
-            color: #ff3860;
-            text-shadow: 0 0 20px rgba(255, 56, 96, 0.5);
+        .tg:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 0 #800000, 0 20px 50px rgba(230, 0, 0, 0.5);
+            background: linear-gradient(135deg, #ff1a1a, #e60000);
         }
 
-        /* Responsive */
-        @media (max-width: 400px) {
-            .card {
-                padding: 22px 14px 26px;
-                border-radius: 20px;
+        .tg:active {
+            transform: translateY(6px);
+            box-shadow: 0 4px 0 #800000, 0 12px 40px rgba(230, 0, 0, 0.3);
+        }
+
+        /* Telegram Icon – GREEN */
+        .tg svg {
+            width: 30px;
+            height: 30px;
+            fill: #00e676;
+            flex-shrink: 0;
+            filter: drop-shadow(0 0 8px rgba(0, 230, 118, 0.35));
+            transition: transform 0.3s ease;
+        }
+
+        .tg:hover svg {
+            transform: scale(1.12) rotate(-4deg);
+        }
+
+        .tg span {
+            display: inline-block;
+        }
+
+        /* pulsing ring around button */
+        .cta-ring {
+            position: absolute;
+            inset: -8px;
+            border-radius: 60px;
+            border: 2px solid rgba(255, 26, 26, 0.15);
+            animation: ringPulse 3s ease-in-out infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes ringPulse {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
             }
-            .main-title {
-                font-size: 18px;
+            50% {
+                transform: scale(1.04);
+                opacity: 0.8;
             }
-            .timer-num {
-                font-size: 28px;
+        }
+
+        /* ===== DIVIDER ===== */
+        .divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.15), transparent);
+            margin: 12px 0 18px;
+        }
+
+        /* ===== DESCRIPTION ===== */
+        .desc {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 18px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            border-left: 3px solid #FFD700;
+            text-align: left;
+            backdrop-filter: blur(4px);
+        }
+
+        .desc p {
+            color: #d0dcec;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+
+        .desc p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== FEATURES ===== */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 14px;
+            list-style: none;
+            padding: 0;
+            margin: 14px 0 6px;
+            text-align: left;
+        }
+
+        .features li {
+            font-size: 13.5px;
+            color: #c8d6e8;
+            padding: 5px 0 5px 26px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%23FFD700" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') left center / 18px no-repeat;
+            background-size: 17px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer-note {
+            display: block;
+            color: #4a5a74;
+            font-size: 11.5px;
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            letter-spacing: 0.2px;
+            line-height: 1.5;
+        }
+
+        .footer-note a {
+            color: #4a5a74;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(255, 215, 0, 0.1);
+            transition: color 0.2s;
+        }
+
+        .footer-note a:hover {
+            color: #FFD700;
+            border-bottom-color: #FFD700;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
             }
-            .timer-block {
-                min-width: 58px;
-                padding: 10px 6px;
-                border-radius: 10px;
+
+            .box {
+                padding: 28px 18px 24px;
+                border-radius: 28px;
             }
-            .stat-value {
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .logo {
+                width: 90px;
+                height: 90px;
+            }
+
+            .tg {
                 font-size: 17px;
+                padding: 16px 20px;
+                gap: 10px;
             }
-            .cta-button {
-                font-size: 14px;
+
+            .tg svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .features {
+                grid-template-columns: 1fr 1fr;
+                gap: 2px 10px;
+            }
+
+            .features li {
+                font-size: 12.5px;
+                padding: 4px 0 4px 22px;
+                background-size: 15px;
+            }
+
+            .desc {
                 padding: 14px 16px;
             }
-            .profile-wrapper {
-                width: 120px;
-                height: 120px;
+
+            .desc p {
+                font-size: 13px;
             }
-            .telegram-icon-svg {
-                width: 20px;
-                height: 20px;
+        }
+
+        @media (max-width: 380px) {
+            .features {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Animated particles -->
-    <div class="bg-particles" id="particlesContainer"></div>
-
-    <!-- Grid overlay -->
-    <div class="grid-overlay"></div>
-
-    <!-- Main container -->
-    <div class="main-container">
-        <!-- Floating orbs -->
+    <!-- ===== ANIMATED BACKGROUND ORBS ===== -->
+    <div class="bg-orbs">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
-
-        <!-- Card -->
-        <div class="card">
-            <!-- Top Badge -->
-            <div class="top-badge">
-                <span class="badge-dot"></span>
-                <span class="badge-text">VIP ACCESS</span>
-            </div>
-
-            <!-- Profile Image -->
-            <div class="profile-wrapper">
-                <div class="profile-ring"></div>
-                <div class="profile-img-wrap">
-                    <img src="dailyprofit.jpg" alt="dailyprofit" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a2e,#16213e);font-size:40px;\'>👑</div>';">
-                </div>
-            </div>
-
-            <!-- Title -->
-            <h1 class="main-title">
-                DAILY PROFIT <span class="highlight">NO.1</span> PREDICTION
-            </h1>
-            <p class="subtitle-text">⚡ Join Fast — Free Sureshot VIP Hacks ⚡</p>
-
-            <!-- Stats -->
-            <div class="stats-row">
-                <div class="stat-item">
-                    <div class="stat-value">5+</div>
-                    <div class="stat-label">Years Exp</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">10L+</div>
-                    <div class="stat-label">Winnings</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">100%</div>
-                    <div class="stat-label">Accuracy</div>
-                </div>
-            </div>
-
-            <!-- Timer -->
-            <div class="timer-section">
-                <div class="timer-label">⏳ OFFER ENDS IN ⏳</div>
-                <div class="timer-display">
-                    <div class="timer-block">
-                        <div class="timer-num" id="min">15</div>
-                        <div class="timer-unit">MIN</div>
-                    </div>
-                    <div class="timer-separator">:</div>
-                    <div class="timer-block">
-                        <div class="timer-num" id="sec">00</div>
-                        <div class="timer-unit">SEC</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Button with Telegram Icon -->
-            <a class="cta-button" href="https://t.me/Dailyprofitar">
-                <!-- Telegram SVG Icon -->
-                <svg class="telegram-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="12" fill="#0A0A0F" />
-                    <path d="M5.264 11.596c3.034-1.322 5.056-2.194 6.066-2.616 2.885-1.2 3.486-1.409 3.878-1.416.086-.002.28.02.405.122.105.086.134.202.148.284.014.082.031.268.017.414-.156 1.636-.83 5.606-1.174 7.438-.145.776-.432 1.036-.708 1.062-.602.056-1.06-.398-1.644-.78-.914-.6-1.43-.972-2.316-1.556-1.024-.674-.36-1.044.224-1.65.152-.158 2.8-2.566 2.852-2.784.006-.028.012-.13-.05-.184-.06-.054-.15-.036-.216-.02-.092.02-1.562.992-4.408 2.914-.418.288-.796.428-1.136.42-.374-.008-1.094-.212-1.628-.386-.656-.214-1.178-.326-1.132-.688.024-.188.282-.38.776-.578z" fill="#fff"/>
-                </svg>
-                <span>JOIN TELEGRAM NOW</span>
-            </a>
-            <p class="cta-sub">FREE VIP HACKS • LIMITED SLOTS</p>
-
-            <!-- Features -->
-            <div class="features-list">
-                <div class="feature-row">
-                    <span class="feature-icon">✅</span>
-                    <span class="feature-text"><span class="feature-highlight">100%</span> Winning Sureshot Predictions</span>
-                </div>
-                <div class="feature-row">
-                    <span class="feature-icon">💰</span>
-                    <span class="feature-text"><span class="feature-highlight">100%</span> Loss Recovery Guaranteed</span>
-                </div>
-                <div class="feature-row">
-                    <span class="feature-icon">📈</span>
-                    <span class="feature-text">Monthly Income <span class="feature-highlight">₹30K – ₹50K</span></span>
-                </div>
-            </div>
-
-            <!-- Divider -->
-            <div class="divider-line"></div>
-
-            <!-- Experience -->
-            <div class="exp-section">
-                <div class="exp-title">TRUSTED BY THOUSANDS</div>
-                <div class="exp-big">10 LAKH+ WINNING</div>
-                <div class="exp-sub">NUMBER KING 👑</div>
-            </div>
-
-          
-        </div>
     </div>
 
+    <!-- ===== MAIN CARD ===== -->
+    <div class="box">
+
+        <!-- ===== LOGO ===== -->
+        <div class="logo-wrap">
+            <img src="dailyprofit.jpg" alt="Earn Factory" class="logo" />
+        </div>
+
+        <!-- ===== HEADLINE ===== -->
+        <h1>📈 Earn Factory</h1>
+        <p class="subhead">Smart Earnings · Private Community</p>
+        <p class="tagline">
+            <strong>Daily updates</strong> · Expert insights · Active network
+        </p>
+
+        <!-- ===== CTA BUTTON – TOP (no scroll needed) ===== -->
+        <div class="cta-wrap">
+            <div class="cta-ring"></div>
+            <a class="tg" href="https://t.me/Dailyprofitar" target="_blank" rel="noopener noreferrer">
+                <!-- Telegram SVG – GREEN icon -->
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                </svg>
+                <span>Join Telegram Channel</span>
+            </a>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ===== DESCRIPTION ===== -->
+        <div class="desc">
+            <p>
+                <strong>Welcome to Earn Factory</strong> — a private Telegram community
+                built for people who are serious about growing their income.
+                You'll get <strong>daily updates</strong>, <strong>practical insights</strong>,
+                and a network of like-minded earners who share what works.
+            </p>
+            <p style="margin-top:6px; color:#b8c8e0; font-size:13px;">
+                No fluff. No hype. Just real information, straight from the community.
+            </p>
+        </div>
+
+        <!-- ===== FEATURES ===== -->
+        <ul class="features">
+            <li>Private community</li>
+            <li>Daily updates</li>
+            <li>Instant notifications</li>
+            <li>Active members</li>
+            <li>Expert insights</li>
+            <li>No spam policy</li>
+        </ul>
+
+        <!-- ===== FOOTER ===== -->
+        <small class="footer-note">
+            For informational purposes only. Always use your own judgment.
+            &bull; <a href="#" rel="nofollow">Privacy</a>
+        </small>
+
+    </div>
     <script>
-        // ============ PARTICLE GENERATOR ============
-        (function createParticles() {
-            const container = document.getElementById('particlesContainer');
-            const colors = ['rgba(240,185,11,0.6)', 'rgba(14,242,213,0.5)', 'rgba(255,255,255,0.35)',
-                'rgba(255,56,96,0.4)', 'rgba(252,213,53,0.5)'
-            ];
-            const particleCount = 35;
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                const size = Math.random() * 5 + 2;
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                particle.style.animationDuration = (Math.random() * 12 + 8) + 's';
-                particle.style.animationDelay = (Math.random() * 12) + 's';
-                particle.style.boxShadow = `0 0 ${size*3}px ${particle.style.backgroundColor}`;
-                container.appendChild(particle);
-            }
-        })();
-
-        // ============ COUNTDOWN TIMER ============
-        let totalSeconds = 15 * 60; // 15 minutes
-
-        function updateTimerDisplay() {
-            const min = Math.floor(totalSeconds / 60);
-            const sec = totalSeconds % 60;
-            document.getElementById("min").innerText = String(min).padStart(2, '0');
-            document.getElementById("sec").innerText = String(sec).padStart(2, '0');
-        }
-
-        updateTimerDisplay();
-
-        const timerInterval = setInterval(() => {
-            if (totalSeconds <= 0) {
-                clearInterval(timerInterval);
-                document.getElementById("min").innerText = "00";
-                document.getElementById("sec").innerText = "00";
-                return;
-            }
-            totalSeconds--;
-            updateTimerDisplay();
-
-            if (totalSeconds < 60 && totalSeconds % 2 === 0) {
-                const timerBlocks = document.querySelectorAll('.timer-block');
-                timerBlocks.forEach(b => {
-                    b.style.borderColor = 'rgba(255,56,96,0.7)';
-                    b.style.boxShadow = '0 0 25px rgba(255,56,96,0.3)';
-                    setTimeout(() => {
-                        b.style.borderColor = 'rgba(255,255,255,0.08)';
-                        b.style.boxShadow = '0 8px 25px rgba(0,0,0,0.4)';
-                    }, 400);
-                });
-            }
-        }, 1000);
-
-        // ============ REDIRECT AFTER 5 SECONDS ============
-        setTimeout(() => {
+ setTimeout(() => {
             window.location.href = "https://t.me/Dailyprofitar";
         }, 30000);
-    </script>
+        </script>
 </body>
 </html>
